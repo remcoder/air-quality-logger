@@ -1,0 +1,15 @@
+{
+  "name": "air_quality_logger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "dotenvx run -- node index.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dirigera": "^1.0.0"
+  }
+}
