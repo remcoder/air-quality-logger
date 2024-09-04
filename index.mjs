@@ -9,7 +9,6 @@ async function getData() {
   })
 
   const devices = await client.devices.list()
-
   const airSensor = devices.find(device => device.deviceType == 'environmentSensor');
 
   return {
@@ -19,7 +18,6 @@ async function getData() {
     humidity: airSensor.attributes.currentRH,
   }
 }
-
 
 async function sendTelemetry(data) {
   console.log('Sending telemetry data:', data);
@@ -35,16 +33,10 @@ async function sendTelemetry(data) {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    console.log(response.status);
   } catch (error) {
     console.error('Error:', error);
   }
 }
 
-// Call the async function to send the telemetry data
-// sendTelemetry();
-
 const sensorData = await getData();
-console.log(sensorData);
-
 sendTelemetry(sensorData);
