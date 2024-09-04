@@ -1,4 +1,5 @@
-import { createDirigeraClient } from 'dirigera'
+import 'dotenv/config';
+import { createDirigeraClient } from 'dirigera';
 
 const url = process.env.TELEMETRY_URL;
 

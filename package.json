@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "dotenvx run -- node index.mjs",
+    "start": "node index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dirigera": "^1.0.0"
+    "dirigera": "^1.0.0",
+    "dotenv": "^16.4.5"
   }
 }
